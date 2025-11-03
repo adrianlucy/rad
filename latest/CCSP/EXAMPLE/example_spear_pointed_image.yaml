@@ -35,7 +35,7 @@ properties:
               Slit shutter aperture mode
             type: string
           exposure:
-            # Adding more sub-keys to exposure, and modifying exposure_time
+            # Add more sub-keys to exposure, and modify exposure_time
             properties:
               exposure_time:
                 title: Median exposure time (s) per slit width^2
@@ -61,6 +61,13 @@ properties:
             title: Grasp (cm^-2 sr^-1) per exon at line wavelength
             type: number
             unit: "cm**-2.sr**-1"
+          wavelength:
+            # Add units to wavelength max and min
+            properties:
+              maximum:
+                unit: "Angstrom"
+              minimum:
+                unit: "Angstrom"
         required: [wcs, aperture, grasp]
   data:
     title: Science Data (photon/(cm^2 s sr))
