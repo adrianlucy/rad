@@ -35,10 +35,8 @@ properties:
               Slit shutter aperture mode
             type: string
           exposure:
-            # Add more sub-keys to exposure, and modify exposure_time
+            # Add more sub-keys to exposure
             properties:
-              exposure_time:
-                title: Median exposure time (s) per slit width^2
               max_exposure_time:
                 title: Max exposure time (s) per slit width^2
                 type: number
@@ -52,7 +50,6 @@ properties:
                 type: number
                 unit: "s"
             required: [
-              exposure_time, 
               max_exposure_time, 
               min_exposure_time,
               pixel_exposure_time,
