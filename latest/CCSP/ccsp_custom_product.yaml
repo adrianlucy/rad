@@ -23,7 +23,7 @@ allOf:
           scale.
         tag: tag:stsci.edu:asdf/time/time-1.*
       exposure:
-        title: Exposure information
+        title: Exposure time summary information
         type: object
         properties:
           start_time:

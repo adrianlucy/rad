@@ -30,13 +30,16 @@ properties:
               WCS for the data array and all concomitant arrays
             tag: tag:stsci.edu:gwcs/wcs-*
           aperture:
-            title: Aperture
-            description: |
-              Slit shutter aperture mode
+            title: Slit shutter aperture mode
             type: string
-          exposure:
-            # Add more sub-keys to exposure
+          exposure_stats:
+            title: Exposure map statistical detail
+            type: object
             properties:
+              median_exposure_time:
+                title: Median exposure time (s) per slit width^2
+                type: number
+                unit: "s"
               max_exposure_time:
                 title: Max exposure time (s) per slit width^2
                 type: number
@@ -50,6 +53,7 @@ properties:
                 type: number
                 unit: "s"
             required: [
+              median_exposure_time,
               max_exposure_time, 
               min_exposure_time,
               pixel_exposure_time,
@@ -58,14 +62,7 @@ properties:
             title: Grasp (cm^-2 sr^-1) per exon at line wavelength
             type: number
             unit: "cm**-2.sr**-1"
-          wavelength:
-            # Add units to wavelength max and min
-            properties:
-              maximum:
-                unit: "Angstrom"
-              minimum:
-                unit: "Angstrom"
-        required: [wcs, aperture, grasp]
+        required: [wcs, aperture, exposure_stats, grasp]
   data:
     title: Science Data (photon/(cm^2 s sr))
     description: |
