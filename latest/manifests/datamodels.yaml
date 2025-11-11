@@ -202,3 +202,6 @@ tags:
     schema_uri: asdf://stsci.edu/datamodels/roman/schemas/CCSP/EXAMPLE/example_derived_mosaic-1.0.0
     title: Example mosaic derived CCSP product
     description: Example mosaic derived CCSP product
+  - tag_uri: asdf://stsci.edu/datamodels/roman/tags/CCSP/EXAMPLE/example_spear_pointed_image-1.0.0
+    schema_uri: asdf://stsci.edu/datamodels/roman/schemas/CCSP/EXAMPLE/example_spear_pointed_image-1.0.0
+    title: Example SPEAR pointed image CCSP product
